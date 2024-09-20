@@ -1,3 +1,3 @@
 export default function IntroduceMe() {
-  return <>Hello my name is Laza Nantenaina</>;
+  return <h1>Hello! My name is Laza Nantenaina</h1>;
 }
