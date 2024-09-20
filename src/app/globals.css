@@ -21,3 +21,14 @@
     text-wrap: balance;
   }
 }
+
+
+@layer base {
+  h1 {
+    @apply text-2xl font-normal ;
+  }
+  h2 {
+    @apply text-xl font-normal;
+  }
+
+}
