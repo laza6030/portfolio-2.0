@@ -1,3 +1,23 @@
 export default function IntroduceMe() {
-  return <h1>Hello! My name is Laza Nantenaina</h1>;
+  return (
+    <div className="mt-auto mb-auto">
+      <p>
+        Hello! I'm&nbsp;
+        <span className="text-dark-blue">Laza Nantenaina</span>
+      </p>
+
+      <br />
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit
+        porttitor urna sed ornare. Quisque efficitur eros tortor, eu dictum
+        ligula faucibus non. Quisque a pulvinar nisi. Sed tempus risus a mollis
+        accumsan. Nunc tincidunt sem a augue pulvinar, a mattis sapien tempor.
+        Aenean vel dolor eros. Quisque condimentum nisi non sem congue rhoncus a
+        id sapien. Maecenas in posuere enim, at euismod ligula. Fusce bibendum
+        quis nisl quis pellentesque. Integer eget erat et odio fringilla
+        lacinia.
+      </p>
+    </div>
+  );
 }

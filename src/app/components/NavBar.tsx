@@ -1,20 +1,36 @@
-import { BiSolidHomeAlt2 } from "react-icons/bi";
-import { FaUserTie } from "react-icons/fa";
-import { RiComputerFill } from "react-icons/ri";
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
+import { MdSunny } from "react-icons/md";
+import { RiMoonFill } from "react-icons/ri";
 
 export default function NavBar() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleSwitchTheme = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   return (
-    <div className="w-1/2 flex justify-evenly">
-      <button className="flex justify-center p-4 w-1/4">
-        <BiSolidHomeAlt2 className="text-3xl" />
-      </button>
+    <div className="flex flex-row justify-between w-full">
+      <div className="flex flex-row">
+        <Link href="/" className="flex justify-center p-4">
+          Home
+        </Link>
 
-      <button className="flex justify-center p-4 w-1/4">
-        <FaUserTie className="text-3xl" />
-      </button>
+        <Link href="/projects" className="flex justify-center p-4">
+          Projects
+        </Link>
 
-      <button className="flex justify-center p-4 w-1/4">
-        <RiComputerFill className="text-3xl" />
+        <Link href="/about" className="flex justify-center p-4">
+          About
+        </Link>
+      </div>
+
+      <button onClick={handleSwitchTheme}>
+        {isDarkMode ? <MdSunny /> : <RiMoonFill />}
       </button>
     </div>
   );
