@@ -1,6 +1,9 @@
+import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
+
 export default function IntroduceMe() {
   return (
-    <div className="mt-auto mb-auto">
+    <div className="mt-auto mb-auto p-4 flex flex-col h-1/2 ">
       <p>
         Hello! I'm&nbsp;
         <span className="text-dark-blue">Laza Nantenaina</span>
@@ -18,6 +21,15 @@ export default function IntroduceMe() {
         quis nisl quis pellentesque. Integer eget erat et odio fringilla
         lacinia.
       </p>
+
+      <br />
+
+      <div>
+        <Link href="/projects" className="flex items-center ">
+          Projects I worked on...
+          <FiArrowRight className={`ml-3 animate-moving-arrow relative `} />
+        </Link>
+      </div>
     </div>
   );
 }
