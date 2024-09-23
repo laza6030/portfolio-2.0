@@ -7,7 +7,9 @@ export default function Footer() {
 
       <SocialMedia />
 
-      <p>&copy; Laza Nantenaina {new Date().getFullYear()}</p>
+      <p className="text-xs">
+        &copy; Laza Nantenaina {new Date().getFullYear()}
+      </p>
     </div>
   );
 }
