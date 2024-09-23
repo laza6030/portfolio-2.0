@@ -16,6 +16,20 @@ const config: Config = {
       "gunmetal-blue": "#1B263B",
       "dark-blue": "#0D1B2A",
     },
+    extend: {
+      keyframes: {
+        arrow: {
+          "0%": { left: "-10px", fontSize: ".8rem", opacity: "0.6" },
+          "25%": { fontSize: "1.1rem", opacity: "0.8" },
+          "50%": { fontSize: "1.2rem", opacity: "1" },
+          "75%": { fontSize: "1.1rem", opacity: "0.8" },
+          "100%": { left: "10px", fontSize: ".8rem", opacity: "0.6" },
+        },
+      },
+      animation: {
+        "moving-arrow": "arrow 1.1s linear infinite",
+      },
+    },
   },
   plugins: [],
 };
