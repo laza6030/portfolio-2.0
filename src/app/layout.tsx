@@ -23,7 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
-    localStorage.getItem("theme") === "dark"
+    typeof window !== "undefined"
+      ? localStorage.getItem("theme") === "dark"
+      : false
   );
 
   return (
