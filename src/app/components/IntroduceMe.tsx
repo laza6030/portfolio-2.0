@@ -6,7 +6,9 @@ export default function IntroduceMe() {
     <div className="mt-auto mb-auto p-4 flex flex-col h-1/2 ">
       <p>
         Hello! I'm&nbsp;
-        <span className="text-dark-blue">Laza Nantenaina</span>
+        <span className="text-dark-blue dark:text-cadet-blue">
+          Laza Nantenaina
+        </span>
       </p>
 
       <br />
