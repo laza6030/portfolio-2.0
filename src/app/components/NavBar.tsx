@@ -28,6 +28,7 @@ export default function NavBar() {
       isActive: isCurrentPath("/projects"),
     },
     { label: "About", path: "/about", isActive: isCurrentPath("/about") },
+    { label: "Career", path: "/career", isActive: isCurrentPath("/career") },
   ];
 
   return (

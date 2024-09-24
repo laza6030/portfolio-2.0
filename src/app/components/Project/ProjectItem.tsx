@@ -6,7 +6,7 @@ export default function ProjectItem(props: IProps) {
   const { title, description, tools, link } = props;
 
   return (
-    <div className="mb-3">
+    <div className="mb-3 w-full">
       <h6 className="font-bold">{title}</h6>
       <p>{description}</p>
 
