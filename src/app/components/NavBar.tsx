@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, SetStateAction, Dispatch } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,12 +8,23 @@ import { usePathname } from "next/navigation";
 import { MdSunny } from "react-icons/md";
 import { RiMoonFill } from "react-icons/ri";
 
-export default function NavBar() {
+interface IProps {
+  isDarkMode?: boolean;
+  setIsDarkMode?: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function NavBar(props: IProps) {
+  const { isDarkMode, setIsDarkMode } = props;
   const pathname = usePathname();
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const handleSwitchTheme = () => {
-    setIsDarkMode((prev) => !prev);
+    if (isDarkMode) {
+      localStorage.setItem("theme", "light");
+      setIsDarkMode?.(false);
+    } else {
+      localStorage.setItem("theme", "dark");
+      setIsDarkMode?.(true);
+    }
   };
 
   const isCurrentPath = (path: string) => {
@@ -40,6 +51,7 @@ export default function NavBar() {
             href={path}
             className={clsx("flex justify-center p-4 hover:font-bold w-20", {
               "text-cadet-blue": isActive,
+              "dark:text-cadet-blue": isActive,
             })}
           >
             {label}
