@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={isDarkMode ? "dark" : ""}>
       <body
-        className={`${inter.className} bg-light-gray dark:bg-gunmetal-blue flex justify-center text-gunmetal-blue dark:text-light-gray`}
+        className={`${inter.className} bg-light-gray dark:bg-gunmetal-blue flex justify-center text-gunmetal-blue dark:text-light-gray transition-bg linear delay-250`}
       >
         <main className="flex flex-col items-center w-3/5 h-screen ">
           <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />

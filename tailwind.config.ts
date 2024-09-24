@@ -30,6 +30,9 @@ const config: Config = {
       animation: {
         "moving-arrow": "arrow 1.1s linear infinite",
       },
+      transitionProperty: {
+        bg: "background-color",
+      },
     },
   },
   plugins: [],
