@@ -30,5 +30,8 @@
   h2 {
     @apply text-xl font-normal;
   }
+  h3 {
+    @apply text-lg font-normal;
+  }
 
 }
