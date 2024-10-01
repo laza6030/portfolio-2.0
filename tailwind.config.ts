@@ -1,3 +1,4 @@
+import plugin from "tailwindcss/plugin";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -26,16 +27,40 @@ const config: Config = {
           "75%": { fontSize: "1.1rem", opacity: "0.8" },
           "100%": { left: "10px", fontSize: ".8rem", opacity: "0.6" },
         },
+
+        down: {
+          "0%": { top: "-20px" },
+          "25%": { top: "-15px" },
+          "50%": { top: "-10px" },
+          "75%": { top: "-5px" },
+          "100%": { top: "0px" },
+        },
       },
       animation: {
         "moving-arrow": "arrow 1.1s linear infinite",
+        "fade-down": "down .5s ease-out",
       },
       transitionProperty: {
         bg: "background-color",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            };
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        }
+      );
+    }),
+  ],
 };
 
 export default config;
