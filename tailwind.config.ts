@@ -29,16 +29,16 @@ const config: Config = {
         },
 
         down: {
-          "0%": { top: "-20px" },
-          "25%": { top: "-15px" },
-          "50%": { top: "-10px" },
-          "75%": { top: "-5px" },
-          "100%": { top: "0px" },
+          "0%": { top: "-40px", opacity: "0" },
+          "25%": { top: "-30px", opacity: "0.3" },
+          "50%": { top: "-20px", opacity: "0.5" },
+          "75%": { top: "-10px", opacity: "0.7" },
+          "100%": { top: "0px", opacity: "1" },
         },
       },
       animation: {
         "moving-arrow": "arrow 1.1s linear infinite",
-        "fade-down": "down .5s ease-out",
+        "fade-down": "down .8s ease-out",
       },
       transitionProperty: {
         bg: "background-color",
