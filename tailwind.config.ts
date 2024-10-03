@@ -35,10 +35,17 @@ const config: Config = {
           "75%": { top: "-10px", opacity: "0.7" },
           "100%": { top: "0px", opacity: "1" },
         },
+
+        progress: {
+          "0%": { width: "0%" },
+          "50%": { width: "50%" },
+          "100%": { width: "100%" },
+        },
       },
       animation: {
         "moving-arrow": "arrow 1.1s linear infinite",
         "fade-down": "down .8s ease-out",
+        "progress-bar": "progress 1s ease-out",
       },
       transitionProperty: {
         bg: "background-color",
