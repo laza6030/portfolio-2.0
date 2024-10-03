@@ -10,7 +10,7 @@ export default function ProjectItem(props: IProps) {
       <h6 className="font-bold">{title}</h6>
       <p>{description}</p>
 
-      <div className="flex flex-wrap ">
+      <div className="flex flex-wrap">
         Technologies:
         {tools.map((item, index) => (
           <span>
