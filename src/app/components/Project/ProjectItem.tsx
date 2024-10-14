@@ -13,7 +13,7 @@ export default function ProjectItem(props: IProps) {
       <div className="flex flex-wrap">
         Technologies:
         {tools.map((item, index) => (
-          <span>
+          <span key={`techno-${index}`}>
             &nbsp;{item} {index !== tools.length - 1 && "-"}
           </span>
         ))}

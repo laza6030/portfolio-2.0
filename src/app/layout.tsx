@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -23,22 +23,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(
-    typeof window !== "undefined"
-      ? localStorage.getItem("theme") === "dark"
-      : false,
-  );
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  // To prevent hydration error
+  useEffect(() => {
+    setIsDarkMode(
+      typeof window !== "undefined"
+        ? localStorage.getItem("theme") === "dark"
+        : false,
+    );
+  }, []);
 
   const [showLoading, setShowLoading] = useState<boolean>(true);
 
   return (
-    <html lang="en" className={isDarkMode ? "dark" : ""}>
+    <html
+      lang="en"
+      className={isDarkMode ? "dark" : ""}
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body
         className={`${inter.className} linear delay-250 flex justify-center bg-light-gray text-gunmetal-blue transition-bg dark:bg-gunmetal-blue dark:text-light-gray`}
       >
-        {showLoading && <Loading hideLoading={() => setShowLoading(false)} />}
+        {/* {showLoading && <Loading hideLoading={() => setShowLoading(false)} />} */}
 
-        <main className="flex h-screen w-3/5 flex-col items-center">
+        <main className="flex h-screen w-1/2 flex-col items-center">
           <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
           {children}
           <Footer />
