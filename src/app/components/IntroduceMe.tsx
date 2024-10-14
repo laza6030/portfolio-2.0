@@ -3,7 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 export default function IntroduceMe() {
   return (
-    <div className="mb-auto mt-auto flex h-1/2 flex-col p-4">
+    <div className="mb-auto mt-[10%] flex h-[80vh] flex-col p-4">
       <p>
         Hello! I'm&nbsp;
         <span className="text-dark-blue dark:text-cadet-blue">
@@ -36,7 +36,7 @@ export default function IntroduceMe() {
       <br />
 
       <div>
-        <Link href="/projects" className="flex items-center">
+        <Link href="/#projects" className="flex items-center">
           Projects I've worked on...
           <FiArrowRight className={`relative ml-3 animate-moving-arrow`} />
         </Link>

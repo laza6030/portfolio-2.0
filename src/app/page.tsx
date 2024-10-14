@@ -1,9 +1,14 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const IntroduceMe = dynamic(() => import("@/app/components/IntroduceMe"));
+import IntroduceMe from "@/app/components/IntroduceMe";
+import Project from "@/app/components/Project";
 
 export default function Home() {
-  return <IntroduceMe />;
+  return (
+    <div className="mt-[60px]">
+      <span id="home"></span>
+      <IntroduceMe />
+      <Project />
+    </div>
+  );
 }

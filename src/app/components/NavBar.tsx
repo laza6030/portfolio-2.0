@@ -32,10 +32,10 @@ export default function NavBar(props: IProps) {
   };
 
   return (
-    <div className="flex w-full flex-row justify-between">
+    <div className="fixed z-[1] flex w-1/2 flex-row justify-between border-b-[1px] bg-light-gray transition-bg dark:bg-gunmetal-blue">
       <div className="flex flex-row">
         <Link
-          href="/"
+          href="/#home"
           className={clsx(
             `relative flex w-20 animate-fade-down justify-center p-4 hover:font-bold`,
             {
@@ -48,7 +48,7 @@ export default function NavBar(props: IProps) {
         </Link>
 
         <Link
-          href="/projects"
+          href="/#projects"
           className={clsx(
             `relative flex w-20 animate-fade-down justify-center p-4 animation-delay-[100ms] hover:font-bold`,
             {
@@ -76,7 +76,7 @@ export default function NavBar(props: IProps) {
 
       <button
         onClick={handleSwitchTheme}
-        className={`relative animate-fade-down animation-delay-[300ms]`}
+        className={`relative animate-fade-down p-4 animation-delay-[300ms]`}
       >
         {isDarkMode ? <MdSunny /> : <RiMoonFill />}
       </button>
