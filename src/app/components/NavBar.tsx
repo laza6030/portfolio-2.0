@@ -60,7 +60,7 @@ export default function NavBar(props: IProps) {
           Projects
         </Link>
 
-        <Link
+        {/* <Link
           href="/about"
           className={clsx(
             `relative flex w-20 animate-fade-down justify-center p-4 animation-delay-[200ms] hover:font-bold`,
@@ -71,7 +71,7 @@ export default function NavBar(props: IProps) {
           )}
         >
           About
-        </Link>
+        </Link> */}
       </div>
 
       <button

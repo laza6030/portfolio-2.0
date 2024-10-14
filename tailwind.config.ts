@@ -17,6 +17,7 @@ const config: Config = {
       "steel-blue": "#415A77",
       "gunmetal-blue": "#1B263B",
       "dark-blue": "#0D1B2A",
+      "sky-blue": "#3d89ff",
     },
     extend: {
       keyframes: {
@@ -64,7 +65,7 @@ const config: Config = {
         },
         {
           values: theme("transitionDelay"),
-        }
+        },
       );
     }),
   ],

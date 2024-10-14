@@ -21,14 +21,23 @@ export default function IntroduceMe() {
         Aenean vel dolor eros. Quisque condimentum nisi non sem congue rhoncus a
         id sapien. Maecenas in posuere enim, at euismod ligula. Fusce bibendum
         quis nisl quis pellentesque. Integer eget erat et odio fringilla
-        lacinia.
+        lacinia.&nbsp;
+        <span>
+          <a
+            href="https://read.cv/laza_nantenaina"
+            target="_blank"
+            className="text-sky-blue"
+          >
+            Read my resume.
+          </a>
+        </span>
       </p>
 
       <br />
 
       <div>
         <Link href="/projects" className="flex items-center">
-          Projects I worked on...
+          Projects I've worked on...
           <FiArrowRight className={`relative ml-3 animate-moving-arrow`} />
         </Link>
       </div>
