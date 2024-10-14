@@ -32,16 +32,16 @@ export default function NavBar(props: IProps) {
   };
 
   return (
-    <div className="flex flex-row justify-between w-full">
+    <div className="flex w-full flex-row justify-between">
       <div className="flex flex-row">
         <Link
           href="/"
           className={clsx(
-            `flex justify-center p-4 hover:font-bold w-20 animate-fade-down relative`,
+            `relative flex w-20 animate-fade-down justify-center p-4 hover:font-bold`,
             {
               "text-cadet-blue": pathname === "/",
               "dark:text-cadet-blue": pathname === "/",
-            }
+            },
           )}
         >
           Home
@@ -50,33 +50,33 @@ export default function NavBar(props: IProps) {
         <Link
           href="/projects"
           className={clsx(
-            `flex justify-center p-4 hover:font-bold w-20 animate-fade-down animation-delay-[100ms] relative`,
+            `relative flex w-20 animate-fade-down justify-center p-4 animation-delay-[100ms] hover:font-bold`,
             {
               "text-cadet-blue": isCurrentPath("/projects"),
               "dark:text-cadet-blue": isCurrentPath("/projects"),
-            }
+            },
           )}
         >
           Projects
         </Link>
 
-        <Link
+        {/* <Link
           href="/about"
           className={clsx(
-            `flex justify-center p-4 hover:font-bold w-20 animate-fade-down animation-delay-[200ms] relative`,
+            `relative flex w-20 animate-fade-down justify-center p-4 animation-delay-[200ms] hover:font-bold`,
             {
               "text-cadet-blue": isCurrentPath("/about"),
               "dark:text-cadet-blue": isCurrentPath("/about"),
-            }
+            },
           )}
         >
           About
-        </Link>
+        </Link> */}
       </div>
 
       <button
         onClick={handleSwitchTheme}
-        className={`animate-fade-down animation-delay-[300ms] relative`}
+        className={`relative animate-fade-down animation-delay-[300ms]`}
       >
         {isDarkMode ? <MdSunny /> : <RiMoonFill />}
       </button>

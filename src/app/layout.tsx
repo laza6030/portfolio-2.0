@@ -7,6 +7,7 @@ import "./globals.css";
 
 import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer/Footer";
+import Loading from "@/app/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,15 +26,19 @@ export default function RootLayout({
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
     typeof window !== "undefined"
       ? localStorage.getItem("theme") === "dark"
-      : false
+      : false,
   );
+
+  const [showLoading, setShowLoading] = useState<boolean>(true);
 
   return (
     <html lang="en" className={isDarkMode ? "dark" : ""}>
       <body
-        className={`${inter.className} bg-light-gray dark:bg-gunmetal-blue flex justify-center text-gunmetal-blue dark:text-light-gray transition-bg linear delay-250`}
+        className={`${inter.className} linear delay-250 flex justify-center bg-light-gray text-gunmetal-blue transition-bg dark:bg-gunmetal-blue dark:text-light-gray`}
       >
-        <main className="flex flex-col items-center w-3/5 h-screen ">
+        {showLoading && <Loading hideLoading={() => setShowLoading(false)} />}
+
+        <main className="flex h-screen w-3/5 flex-col items-center">
           <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
           {children}
           <Footer />
