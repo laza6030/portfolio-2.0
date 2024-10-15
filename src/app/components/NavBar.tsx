@@ -37,7 +37,7 @@ export default function NavBar(props: IProps) {
         <Link
           href="/#home"
           className={clsx(
-            `relative flex w-20 animate-fade-down justify-center p-4 hover:font-bold`,
+            `relative flex w-20 animate-fade-down justify-center p-4 text-sm hover:font-bold`,
             {
               "text-cadet-blue": pathname === "/",
               "dark:text-cadet-blue": pathname === "/",
@@ -50,7 +50,7 @@ export default function NavBar(props: IProps) {
         <Link
           href="/#projects"
           className={clsx(
-            `relative flex w-20 animate-fade-down justify-center p-4 animation-delay-[100ms] hover:font-bold`,
+            `relative flex w-20 animate-fade-down justify-center p-4 text-sm animation-delay-[100ms] hover:font-bold`,
             {
               "text-cadet-blue": isCurrentPath("/projects"),
               "dark:text-cadet-blue": isCurrentPath("/projects"),

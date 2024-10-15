@@ -1,19 +1,14 @@
-import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
+// import Link from "next/link";
+// import { FiArrowRight } from "react-icons/fi";
 
 export default function IntroduceMe() {
   return (
-    <div className="mb-auto mt-[10%] flex h-[80vh] flex-col p-4">
-      <p>
-        Hello! I'm&nbsp;
-        <span className="text-dark-blue dark:text-cadet-blue">
-          Laza Nantenaina
-        </span>
-      </p>
+    <div className="mb-auto mt-[10%] flex flex-col p-4">
+      <p className="text-xl">Hello! I'm Laza Nantenaina</p>
 
       <br />
 
-      <p>
+      <p className="text-justify text-[15px]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit
         porttitor urna sed ornare. Quisque efficitur eros tortor, eu dictum
         ligula faucibus non. Quisque a pulvinar nisi. Sed tempus risus a mollis
@@ -33,14 +28,14 @@ export default function IntroduceMe() {
         </span>
       </p>
 
-      <br />
+      {/* <br />
 
       <div>
         <Link href="/#projects" className="flex items-center">
           Projects I've worked on...
           <FiArrowRight className={`relative ml-3 animate-moving-arrow`} />
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

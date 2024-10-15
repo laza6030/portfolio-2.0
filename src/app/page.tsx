@@ -8,6 +8,7 @@ export default function Home() {
     <div className="mt-[60px]">
       <span id="home"></span>
       <IntroduceMe />
+      <span id="projects" className="mt-10"></span>
       <Project />
     </div>
   );
