@@ -7,7 +7,7 @@ import "./globals.css";
 
 import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer/Footer";
-import Loading from "@/app/loading";
+// import Loading from "@/app/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
