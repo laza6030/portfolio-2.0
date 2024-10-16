@@ -9,14 +9,14 @@ export default function IntroduceMe() {
       <br />
 
       <p className="text-justify text-[15px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit
-        porttitor urna sed ornare. Quisque efficitur eros tortor, eu dictum
-        ligula faucibus non. Quisque a pulvinar nisi. Sed tempus risus a mollis
-        accumsan. Nunc tincidunt sem a augue pulvinar, a mattis sapien tempor.
-        Aenean vel dolor eros. Quisque condimentum nisi non sem congue rhoncus a
-        id sapien. Maecenas in posuere enim, at euismod ligula. Fusce bibendum
-        quis nisl quis pellentesque. Integer eget erat et odio fringilla
-        lacinia.&nbsp;
+        I’m a passionate software engineer with 4 years of experience in
+        building efficient and scalable applications, particularly using
+        JavaScript. With a strong focus on web development, I have honed my
+        skills in crafting seamless, user-friendly applications. I thrive in
+        collaborative environments, working closely with teams to deliver
+        high-quality solutions. I also enjoy exploring new technologies to
+        continually enhance both my technical expertise and the overall user
+        experience. &nbsp;
         <span>
           <a
             href="https://read.cv/laza_nantenaina"
