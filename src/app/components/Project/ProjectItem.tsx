@@ -8,7 +8,7 @@ export default function ProjectItem(props: IProps) {
   const { title, description, tools, link, githubLink } = props;
 
   return (
-    <div className="mb-10 w-full">
+    <div className="mb-10 ml-[2px] mr-[2px] w-full rounded-md p-4 shadow dark:shadow-dark-blue">
       <h6 className="mb-1 flex items-center font-bold">
         {title}
         {githubLink && (
