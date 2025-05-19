@@ -8,7 +8,9 @@ interface Props {
   projects: ProjectType[];
 }
 
-export default function Project({ title, projects }: Props) {
+export default function Project(props: Props) {
+  const { title, projects } = props;
+
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const onClick = () => {
@@ -22,7 +24,9 @@ export default function Project({ title, projects }: Props) {
         onClick={onClick}
       >
         <h3 className="p-4 font-bold">{title}</h3>
-        <BiSolidChevronRight className="mt-1 font-bold" />
+        <BiSolidChevronRight
+          className={`mt-1 font-bold ${isExpanded && "rotate-90"}`}
+        />
       </div>
       <br />
 
