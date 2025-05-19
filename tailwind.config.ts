@@ -28,15 +28,18 @@ const config: Config = {
           "75%": { fontSize: "1.1rem", opacity: "0.8" },
           "100%": { left: "10px", fontSize: ".8rem", opacity: "0.6" },
         },
-
         down: {
-          "0%": { top: "-40px", opacity: "0" },
-          "25%": { top: "-30px", opacity: "0.3" },
-          "50%": { top: "-20px", opacity: "0.5" },
-          "75%": { top: "-10px", opacity: "0.7" },
-          "100%": { top: "0px", opacity: "1" },
+          "0%": { transform: "translateY(-40px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
-
+        up: {
+          "0%": { transform: "translateY(30px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        opacity: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         progress: {
           "0%": { width: "0%" },
           "50%": { width: "50%" },
@@ -47,6 +50,8 @@ const config: Config = {
         "moving-arrow": "arrow 1.1s linear infinite",
         "fade-down": "down .8s ease-out",
         "progress-bar": "progress 1s ease-out",
+        "fade-up": "up .8s ease-out forwards",
+        opacity: "opacity .8s linear",
       },
       transitionProperty: {
         bg: "background-color",
