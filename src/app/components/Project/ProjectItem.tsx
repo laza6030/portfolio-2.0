@@ -2,13 +2,19 @@ import { FiGithub } from "react-icons/fi";
 
 import { Project } from "@/app/types";
 
-interface IProps extends Project {}
+interface IProps extends Project {
+  index: number;
+  className?: string;
+}
 
 export default function ProjectItem(props: IProps) {
-  const { title, description, tools, link, githubLink } = props;
+  const { title, description, tools, githubLink, className, index } = props;
 
   return (
-    <div className="mb-10 ml-[2px] mr-[2px] w-full rounded-md p-4 shadow dark:shadow-dark-blue">
+    <div
+      className={`mb-10 ml-[2px] mr-[2px] w-full animate-fade-up rounded-md p-4 opacity-0 shadow dark:shadow-dark-blue ${className}`}
+      style={{ animationDelay: `${(index + 1) * 200}ms` }}
+    >
       <h6 className="mb-1 flex items-center font-bold">
         {title}
         {githubLink && (
