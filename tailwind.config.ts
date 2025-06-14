@@ -48,7 +48,7 @@ const config: Config = {
       },
       animation: {
         "moving-arrow": "arrow 1.1s linear infinite",
-        "fade-down": "down .8s ease-out",
+        "fade-down": "down .8s ease-out forwards",
         "progress-bar": "progress 1s ease-out",
         "fade-up": "up .8s ease-out forwards",
         opacity: "opacity .8s linear",

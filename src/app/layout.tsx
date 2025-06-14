@@ -49,7 +49,7 @@ export default function RootLayout({
 
         <main className="flex h-screen w-1/2 flex-col items-center">
           <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-          {children}
+          <div className="mt-16">{children}</div>
           <Footer />
         </main>
       </body>

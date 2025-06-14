@@ -25,29 +25,34 @@ export default function NavBar(props: Props) {
     }
   };
 
+  const menuList: { label: string; path: string }[] = [
+    {
+      label: "Home",
+      path: "/#home",
+    },
+    {
+      label: "Projects",
+      path: "/#projects",
+    },
+    {
+      label: "Experiences",
+      path: "/experiences",
+    },
+  ];
+
   return (
     <div className="fixed z-[1] flex w-1/2 flex-row justify-between border-b-[1px] bg-light-gray transition-bg dark:bg-gunmetal-blue">
       <div className="flex flex-row">
-        <Menu
-          label="Home"
-          path="/#home"
-          currentPath={currentPath}
-          setCurrentPath={setCurrentPath}
-        />
-
-        <Menu
-          label="Projects"
-          path="/#projects"
-          currentPath={currentPath}
-          setCurrentPath={setCurrentPath}
-        />
-
-        <Menu
-          label="Experiences"
-          path="/experiences"
-          currentPath={currentPath}
-          setCurrentPath={setCurrentPath}
-        />
+        {menuList.map(({ label, path }, index) => (
+          <Menu
+            key={`menu-${index}`}
+            index={index}
+            label={label}
+            path={path}
+            currentPath={currentPath}
+            setCurrentPath={setCurrentPath}
+          />
+        ))}
       </div>
 
       <button

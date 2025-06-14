@@ -20,7 +20,7 @@ export default function Project(props: Props) {
   return (
     <div>
       <div
-        className="flex animate-fade-up items-center animation-delay-[500ms] hover:cursor-pointer"
+        className="flex animate-fade-up items-center opacity-0 animation-delay-[500ms] hover:cursor-pointer"
         onClick={onClick}
       >
         <h3 className="p-4 font-bold">{title}</h3>
