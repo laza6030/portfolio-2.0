@@ -1,21 +1,19 @@
 "use client";
 
-import { SetStateAction, Dispatch } from "react";
-import clsx from "clsx";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { SetStateAction, Dispatch, useState } from "react";
 
 import { MdSunny } from "react-icons/md";
 import { RiMoonFill } from "react-icons/ri";
+import Menu from "./Menu";
 
-interface IProps {
+interface Props {
   isDarkMode?: boolean;
   setIsDarkMode?: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function NavBar(props: IProps) {
+export default function NavBar(props: Props) {
   const { isDarkMode, setIsDarkMode } = props;
-  const pathname = usePathname();
+  const [currentPath, setCurrentPath] = useState<string>();
 
   const handleSwitchTheme = () => {
     if (isDarkMode) {
@@ -27,51 +25,34 @@ export default function NavBar(props: IProps) {
     }
   };
 
-  const isCurrentPath = (path: string) => {
-    return pathname.includes(path);
-  };
+  const menuList: { label: string; path: string }[] = [
+    {
+      label: "Home",
+      path: "/#home",
+    },
+    {
+      label: "Projects",
+      path: "/#projects",
+    },
+    {
+      label: "Experiences",
+      path: "/experiences",
+    },
+  ];
 
   return (
     <div className="fixed z-[1] flex w-1/2 flex-row justify-between border-b-[1px] bg-light-gray transition-bg dark:bg-gunmetal-blue">
       <div className="flex flex-row">
-        <Link
-          href="/#home"
-          className={clsx(
-            `relative flex w-20 animate-fade-down justify-center p-4 text-sm hover:font-bold`,
-            {
-              "text-cadet-blue": pathname === "/",
-              "dark:text-cadet-blue": pathname === "/",
-            },
-          )}
-        >
-          Home
-        </Link>
-
-        <Link
-          href="/#projects"
-          className={clsx(
-            `relative flex w-20 animate-fade-down justify-center p-4 text-sm animation-delay-[100ms] hover:font-bold`,
-            {
-              "text-cadet-blue": isCurrentPath("/projects"),
-              "dark:text-cadet-blue": isCurrentPath("/projects"),
-            },
-          )}
-        >
-          Projects
-        </Link>
-
-        {/* <Link
-          href="/about"
-          className={clsx(
-            `relative flex w-20 animate-fade-down justify-center p-4 animation-delay-[200ms] hover:font-bold`,
-            {
-              "text-cadet-blue": isCurrentPath("/about"),
-              "dark:text-cadet-blue": isCurrentPath("/about"),
-            },
-          )}
-        >
-          About
-        </Link> */}
+        {menuList.map(({ label, path }, index) => (
+          <Menu
+            key={`menu-${index}`}
+            index={index}
+            label={label}
+            path={path}
+            currentPath={currentPath}
+            setCurrentPath={setCurrentPath}
+          />
+        ))}
       </div>
 
       <button

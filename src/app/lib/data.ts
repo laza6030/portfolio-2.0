@@ -1,6 +1,12 @@
-import { Project } from "@/app/types";
+import { Project, Experience } from "@/app/types";
 
 export const projectList: Project[] = [
+  {
+    title: "Kadow Club",
+    description:
+      "Integer ullamcorper ut sem id pulvinar. Etiam sit amet quam suscipit, hendrerit enim eget.",
+    tools: ["React", "Typescript", "Nest", "Mongodb", "Hapi"],
+  },
   {
     title: "Mozar",
     description:
@@ -99,5 +105,32 @@ export const sideProjectList: Project[] = [
       "Docker",
     ],
     githubLink: "https://github.com/laza6030/my-todo-list-app",
+  },
+];
+
+export const experiences: Experience[] = [
+  {
+    from: "Jul 2024",
+    to: "current",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem nulla, ultrices eget nisi tempor, egestas consequat risus. Fusce hendrerit mauris at sollicitudin ullamcorper. Nunc porta turpis quis ligula imperdiet laoreet. Aenean faucibus at tortor at pulvinar. Aenean faucibus leo vitae suscipit bibendum. Nunc id vestibulum magna. Phasellus aliquam sagittis tincidunt. Curabitur molestie magna id dapibus consectetur. Quisque non justo blandit, elementum nulla fringilla, aliquam ante. Phasellus venenatis suscipit metus et condimentum. Phasellus sit amet velit quam. Nam dapibus elit commodo lobortis facilisis. Quisque ornare, sapien vel porta ultrices, urna erat pharetra sem, at porta lectus quam id nisi. Sed eget dolor feugiat, posuere ante ac, dignissim ligula.",
+    post: "Software Engineer (Consultant)",
+    society: "ValanoTech",
+  },
+  {
+    from: "Oct 2020",
+    to: "Jun 2024",
+    description:
+      "Integer ullamcorper ut sem id pulvinar. Etiam sit amet quam suscipit, hendrerit enim eget, malesuada massa. Sed dapibus luctus arcu, nec iaculis ligula mollis vitae. Integer urna massa, varius at facilisis non, vulputate eget tortor. Praesent sagittis dignissim diam eu eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque aliquam lorem eget diam ullamcorper aliquam. Maecenas nec sapien porttitor, tincidunt leo quis, dignissim risus. Morbi at consectetur purus. Phasellus et eros enim.",
+    post: "Software Engineer",
+    society: "SmartPredict",
+  },
+  {
+    from: "Feb 2020",
+    to: "Jul 2020",
+    description:
+      "Integer scelerisque imperdiet est. Pellentesque pharetra tincidunt ullamcorper. Morbi ut mi vel leo dignissim dictum ut at tellus. Vivamus vel finibus felis. Nullam ullamcorper augue id semper posuere. Nam varius odio nibh, nec ultricies arcu lacinia ac. Etiam ut eleifend tortor. Phasellus nibh leo, convallis nec leo a, suscipit tristique arcu.",
+    post: "Desktop Support Engineer",
+    society: "Easytech",
   },
 ];

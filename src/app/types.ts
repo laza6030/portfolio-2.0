@@ -5,3 +5,11 @@ export type Project = {
   link?: string;
   githubLink?: string;
 };
+
+export type Experience = {
+  from: string;
+  to: string;
+  society: string;
+  post: string;
+  description: string;
+};

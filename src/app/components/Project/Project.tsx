@@ -4,12 +4,13 @@ import { Project as ProjectType } from "@/app/types";
 import ProjectItem from "./ProjectItem";
 
 interface Props {
+  index: number;
   title: string;
   projects: ProjectType[];
 }
 
 export default function Project(props: Props) {
-  const { title, projects } = props;
+  const { title, projects, index } = props;
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
@@ -20,8 +21,9 @@ export default function Project(props: Props) {
   return (
     <div>
       <div
-        className="flex animate-fade-up items-center animation-delay-[500ms] hover:cursor-pointer"
+        className="flex animate-fade-up items-center opacity-0 animation-delay-[500ms] hover:cursor-pointer"
         onClick={onClick}
+        style={{ animationDelay: `${(index + 4) * 300}ms` }}
       >
         <h3 className="p-4 font-bold">{title}</h3>
         <BiSolidChevronRight
