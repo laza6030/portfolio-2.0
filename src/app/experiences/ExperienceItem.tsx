@@ -18,10 +18,10 @@ export default function ExperienceItem(props: Props) {
 
       <div className="mb-2 mt-2 font-thin">
         <span className="text-xl">{post}</span> at&nbsp;
-        <span>{society}</span>
+        <span className="text-xl">{society}</span>
       </div>
 
-      <div className="text-justify">{description}</div>
+      <div className="text-justify text-[14px]">{description}</div>
     </div>
   );
 }

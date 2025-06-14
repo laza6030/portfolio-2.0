@@ -6,7 +6,11 @@ export default function Experience() {
   return (
     <div className="mt-[60px] flex flex-col">
       {experiences.map((experience, index) => (
-        <ExperienceItem index={index} {...experience} />
+        <ExperienceItem
+          key={`experience-${index + 1}`}
+          index={index}
+          {...experience}
+        />
       ))}
     </div>
   );
