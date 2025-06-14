@@ -40,7 +40,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={isDarkMode ? "dark" : ""}
-      style={{ scrollBehavior: "smooth" }}
+      style={{ scrollBehavior: "smooth", scrollbarGutter: "stable" }}
     >
       <body
         className={`${inter.className} linear delay-250 flex justify-center bg-light-gray text-gunmetal-blue transition-bg dark:bg-gunmetal-blue dark:text-light-gray`}

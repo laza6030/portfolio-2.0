@@ -2,12 +2,12 @@ import { FiGithub } from "react-icons/fi";
 
 import { Project } from "@/app/types";
 
-interface IProps extends Project {
+interface Props extends Project {
   index: number;
   className?: string;
 }
 
-export default function ProjectItem(props: IProps) {
+export default function ProjectItem(props: Props) {
   const { title, description, tools, githubLink, className, index } = props;
 
   return (
