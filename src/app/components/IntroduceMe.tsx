@@ -1,7 +1,7 @@
 export default function IntroduceMe() {
   return (
-    <div className="mb-auto mt-[10%] flex flex-col p-4">
-      <p className="animate-opacity text-xl">Hello! I'm Laza Nantenaina</p>
+    <div className="mt-[10%] mb-auto flex flex-col p-4">
+      <p className="animate-opacity text-xl">Hello! I’m Laza Nantenaina</p>
 
       <br />
 

@@ -9,14 +9,14 @@ export default function ExperienceItem(props: Props) {
 
   return (
     <div
-      className={`mb-4 mt-4 w-full animate-fade-up p-4 opacity-0`}
+      className={`animate-fade-up mt-4 mb-4 w-full p-4 opacity-0`}
       style={{ animationDelay: `${(index + 1) * 200}ms` }}
     >
       <h6 className="mb-1 flex items-center font-bold">
         {from} - {to}
       </h6>
 
-      <div className="mb-2 mt-2 font-thin">
+      <div className="mt-2 mb-2 font-thin">
         <span className="text-xl">{post}</span> at&nbsp;
         <span className="text-xl">{society}</span>
       </div>

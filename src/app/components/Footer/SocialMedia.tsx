@@ -17,11 +17,11 @@ export default function SocialMedia() {
   ];
 
   return (
-    <div className="mb-2 mt-2 flex rounded-md border border-dark-blue p-1 dark:border-light-gray">
+    <div className="border-dark-blue dark:border-light-gray mt-2 mb-2 flex rounded-md border p-1">
       {socialMedia.map(({ Icon }, index) => (
         <button
           key={`social-media-${index}`}
-          className="mx-2 text-xl text-dark-blue hover:text-cadet-blue dark:text-light-gray"
+          className="text-dark-blue hover:text-cadet-blue dark:text-light-gray mx-2 text-xl"
         >
           <Icon />
         </button>

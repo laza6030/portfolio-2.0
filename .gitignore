@@ -1,2 +1,12 @@
 node_modules
 .next
+
+# build artifacts
+*.tsbuildinfo
+
+# env
+.env*
+!.env.example
+
+# os
+.DS_Store

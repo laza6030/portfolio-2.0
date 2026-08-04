@@ -21,7 +21,7 @@ export default function Menu(props: Props) {
       href={path}
       style={{ animationDelay: `${(index + 1) * 200}ms` }}
       className={clsx(
-        `relative flex animate-fade-down justify-center p-4 text-sm opacity-0 hover:font-bold`,
+        `animate-fade-down relative flex justify-center p-3 text-sm opacity-0 hover:font-bold sm:p-4`,
         {
           "text-cadet-blue": isCurrentPath,
           "dark:text-cadet-blue": isCurrentPath,

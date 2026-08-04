@@ -2,7 +2,7 @@ import SocialMedia from "./SocialMedia";
 
 export default function Footer() {
   return (
-    <div className="fixed bottom-0 flex w-1/2 flex-col items-center border-t-[1px] bg-light-gray pt-3 transition-bg dark:bg-gunmetal-blue">
+    <div className="bg-light-gray transition-bg dark:bg-gunmetal-blue fixed bottom-0 flex w-full flex-col items-center border-t pt-3 sm:w-4/5 lg:w-1/2">
       <p className="text-sm">Reach me out</p>
 
       <SocialMedia />

@@ -1,17 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-*: initial;
+  --color-disabled: #8d99ae;
+  --color-light-gray: #e0e1dd;
+  --color-cadet-blue: #778da9;
+  --color-steel-blue: #415a77;
+  --color-gunmetal-blue: #1b263b;
+  --color-dark-blue: #0d1b2a;
+  --color-sky-blue: #3d89ff;
+
+  --animate-moving-arrow: arrow 1.1s linear infinite;
+  --animate-fade-down: down 0.8s ease-out forwards;
+  --animate-progress-bar: progress 1s ease-out;
+  --animate-fade-up: up 0.8s ease-out forwards;
+  --animate-opacity: opacity 0.8s linear;
+
+  --transition-property-bg: background-color;
+
+  @keyframes arrow {
+    0% {
+      left: -10px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+    25% {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+    50% {
+      font-size: 1.2rem;
+      opacity: 1;
+    }
+    75% {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+    100% {
+      left: 10px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  }
+  @keyframes down {
+    0% {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes up {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes progress {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
   }
 }
 
+/* v4 dropped Preflight's cursor: pointer on buttons. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility animation-delay-* {
+  animation-delay: --value([*]);
+}
 
 @layer base {
   h1 {
-    @apply text-2xl font-normal ;
+    @apply text-2xl font-normal;
   }
   h2 {
     @apply text-xl font-normal;
