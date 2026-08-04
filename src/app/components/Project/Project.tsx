@@ -31,7 +31,7 @@ export default function Project(props: Props) {
           aria-expanded={isExpanded}
           className="flex items-center hover:cursor-pointer"
         >
-          <span className="p-4 font-bold">{title}</span>
+          <span className="p-4">{title}</span>
           <BiSolidChevronRight
             aria-hidden="true"
             className={clsx(

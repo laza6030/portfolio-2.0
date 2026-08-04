@@ -5,6 +5,8 @@ import ExperienceItem from "./ExperienceItem";
 export default function Experience() {
   return (
     <div className="mt-[60px] flex flex-col">
+      <h1 className="animate-opacity p-4">Experiences</h1>
+
       {experiences.map((experience, index) => (
         <ExperienceItem
           key={`experience-${index + 1}`}

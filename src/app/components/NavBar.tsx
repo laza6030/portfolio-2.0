@@ -41,7 +41,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="bg-light-gray transition-bg dark:bg-gunmetal-blue fixed z-1 flex w-full flex-row justify-between border-b sm:w-4/5 lg:w-1/2">
+    <div className="bg-light-gray transition-bg dark:bg-gunmetal-blue fixed z-1 flex w-full max-w-xl flex-row justify-between border-b">
       <div className="flex flex-row">
         {menuList.map(({ label, path }, index) => (
           <Menu

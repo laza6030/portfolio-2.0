@@ -1,11 +1,9 @@
 export default function IntroduceMe() {
   return (
     <div className="mt-[10%] mb-auto flex flex-col p-4">
-      <p className="animate-opacity text-xl">Hello! I’m Laza Nantenaina</p>
+      <h1 className="animate-opacity">Hello! I’m Laza Nantenaina</h1>
 
-      <br />
-
-      <p className="animate-opacity text-justify text-[15px]">
+      <p className="animate-opacity mt-6 text-justify text-base">
         I’m a passionate software engineer with 5 years of experience in
         building efficient and scalable applications, particularly using
         JavaScript. With a strong focus on web development, I have honed my

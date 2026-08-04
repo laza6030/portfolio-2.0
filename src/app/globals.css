@@ -3,6 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-title: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
   --color-*: initial;
   --color-disabled: #8d99ae;
   --color-light-gray: #e0e1dd;
@@ -103,12 +106,12 @@
 
 @layer base {
   h1 {
-    @apply text-2xl font-normal;
+    @apply font-title text-4xl font-normal;
   }
   h2 {
-    @apply text-xl font-normal;
+    @apply font-title text-2xl font-normal;
   }
   h3 {
-    @apply text-lg font-normal;
+    @apply font-title text-xl font-normal;
   }
 }

@@ -15,15 +15,15 @@ export default function ProjectItem(props: Props) {
       className={`animate-fade-up dark:shadow-dark-blue mr-[2px] mb-10 ml-[2px] w-full rounded-md p-4 opacity-0 shadow-sm ${className}`}
       style={{ animationDelay: `${(index + 1) * 200}ms` }}
     >
-      <h6 className="mb-1 flex items-center font-bold">
+      <h4 className="mb-1 flex items-center font-bold">
         {title}
         {githubLink && (
           <a href={githubLink} target="_blank" className="ml-5">
             <FiGithub />
           </a>
         )}
-      </h6>
-      <p className="mb-2 text-sm">{description}</p>
+      </h4>
+      <p className="mb-2 text-[15px]">{description}</p>
 
       <div className="flex flex-wrap">
         {tools.map((item, index) => (
