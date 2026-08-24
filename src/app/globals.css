@@ -7,13 +7,20 @@
   --font-title: var(--font-instrument-serif), ui-serif, Georgia, serif;
 
   --color-*: initial;
-  --color-disabled: #8d99ae;
   --color-light-gray: #e0e1dd;
-  --color-cadet-blue: #778da9;
   --color-steel-blue: #415a77;
   --color-gunmetal-blue: #1b263b;
   --color-dark-blue: #0d1b2a;
-  --color-sky-blue: #3d89ff;
+
+  /* Separators. Without this, bare `border` inherits the text colour and
+     draws an 11:1 line where a hairline is wanted. Swapped under .dark. */
+  --color-border: #c2c6bf;
+
+  /* Active/hover accent. Swapped under .dark below: no single value clears
+     WCAG AA on both backgrounds. Colour alone cannot separate this from the
+     body text (the luminance budget forbids it), so active states pair it
+     with a non-colour cue. */
+  --color-active: #0b5cd5;
 
   --animate-moving-arrow: arrow 1.1s linear infinite;
   --animate-fade-down: down 0.8s ease-out forwards;
@@ -88,6 +95,13 @@
   }
 }
 
+@layer base {
+  .dark {
+    --color-active: #5c9dff;
+    --color-border: #33405a;
+  }
+}
+
 /* v4 dropped Preflight's cursor: pointer on buttons. */
 @layer base {
   button:not(:disabled),
@@ -102,6 +116,23 @@
 
 @utility animation-delay-* {
   animation-delay: --value([*]);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-up,
+  .animate-fade-down,
+  .animate-opacity {
+    opacity: 1 !important;
+  }
 }
 
 @layer base {

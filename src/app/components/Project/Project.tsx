@@ -1,19 +1,29 @@
-import { useState } from "react";
+"use client";
+
+import { useEffect, useId, useState } from "react";
 import clsx from "clsx";
 import { BiSolidChevronRight } from "react-icons/bi";
 import { Project as ProjectType } from "@/app/types";
+import { subscribeToHomeReset } from "@/app/lib/home-reset";
 import ProjectItem from "./ProjectItem";
 
 interface Props {
   index: number;
   title: string;
   projects: ProjectType[];
+  defaultExpanded?: boolean;
 }
 
 export default function Project(props: Props) {
-  const { title, projects, index } = props;
+  const { title, projects, index, defaultExpanded = false } = props;
 
-  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const panelId = useId();
+  const [isExpanded, setIsExpanded] = useState<boolean>(defaultExpanded);
+
+  useEffect(
+    () => subscribeToHomeReset(() => setIsExpanded(defaultExpanded)),
+    [defaultExpanded],
+  );
 
   const onClick = () => {
     setIsExpanded((isExpanded) => !isExpanded);
@@ -21,15 +31,16 @@ export default function Project(props: Props) {
 
   return (
     <div>
-      <h3
-        className="animate-fade-up opacity-0"
+      <h2
+        className="animate-fade-up font-title mb-2 text-xl opacity-0"
         style={{ animationDelay: `${(index + 4) * 300}ms` }}
       >
         <button
           type="button"
           onClick={onClick}
           aria-expanded={isExpanded}
-          className="flex items-center hover:cursor-pointer"
+          aria-controls={panelId}
+          className="flex items-center"
         >
           <span className="p-4">{title}</span>
           <BiSolidChevronRight
@@ -40,19 +51,16 @@ export default function Project(props: Props) {
             )}
           />
         </button>
-      </h3>
-      <br />
+      </h2>
 
       {isExpanded && (
-        <div className="flex flex-wrap justify-start">
+        <ul id={panelId} className="flex list-none flex-wrap justify-start">
           {projects.map((project, index) => (
-            <ProjectItem
-              key={`project-item-${index}`}
-              {...project}
-              index={index}
-            />
+            <li key={project.title} className="w-full">
+              <ProjectItem {...project} index={index} />
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );
