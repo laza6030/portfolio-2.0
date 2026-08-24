@@ -40,13 +40,14 @@ export default function Project(props: Props) {
           onClick={onClick}
           aria-expanded={isExpanded}
           aria-controls={panelId}
-          className="flex items-center"
+          className="group flex items-center"
         >
           <span className="p-4">{title}</span>
+
           <BiSolidChevronRight
             aria-hidden="true"
             className={clsx(
-              "mt-1 font-bold transition-transform",
+              "mt-1 transition-transform group-hover:translate-x-1",
               isExpanded && "rotate-90",
             )}
           />

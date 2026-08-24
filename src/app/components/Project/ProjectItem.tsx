@@ -18,7 +18,7 @@ export default function ProjectItem(props: Props) {
 
   return (
     <div
-      className={`animate-fade-up dark:shadow-dark-blue mr-[2px] mb-10 ml-[2px] w-full rounded-md p-4 opacity-0 shadow-sm ${className ?? ""}`}
+      className={`animate-fade-up dark:shadow-dark-blue mr-[2px] mb-10 ml-[2px] w-full cursor-default rounded-md p-4 opacity-0 shadow-sm transition-shadow hover:shadow-md ${className ?? ""}`}
       style={{ animationDelay: `${(index + 1) * 200}ms` }}
     >
       <h3 className="mb-1 flex items-center font-sans text-base font-bold">
@@ -57,7 +57,7 @@ export default function ProjectItem(props: Props) {
         {tools.map((item) => (
           <li
             key={item}
-            className="transition-bg mr-2 mb-2 rounded-2xl bg-[#d9d9d7] p-3 pt-1 pb-1 text-xs dark:bg-[#283449]"
+            className="hover:shadow-hover mr-2 mb-2 cursor-default rounded-2xl bg-[#d9d9d7] p-3 pt-1 pb-1 text-xs transition-[background-color,box-shadow] dark:bg-[#283449]"
           >
             {item}
           </li>
