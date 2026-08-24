@@ -105,7 +105,7 @@ const sideProjects: LocalizedProject[] = [
       fr: "Le portfolio que vous consultez, entièrement conçu et développé par moi-même.",
       en: "Current portfolio which is designed and developed entirely by myself. For me, it's big accomplishment.",
     },
-    tools: ["Next", "Typescript", "tailwind css"],
+    tools: ["Next", "Typescript", "tailwind css", "Vercel"],
     githubLink: "https://github.com/laza6030/portfolio-2.0",
   },
   {
