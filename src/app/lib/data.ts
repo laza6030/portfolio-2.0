@@ -102,7 +102,7 @@ const sideProjects: LocalizedProject[] = [
   {
     title: { fr: "Portfolio actuel", en: "Current portfolio" },
     description: {
-      fr: "Le portfolio que vous consultez, entièrement conçu et développé par moi-même. Pour moi, c’est un vrai accomplissement.",
+      fr: "Le portfolio que vous consultez, entièrement conçu et développé par moi-même.",
       en: "Current portfolio which is designed and developed entirely by myself. For me, it's big accomplishment.",
     },
     tools: ["Next", "Typescript", "tailwind css"],
@@ -111,7 +111,7 @@ const sideProjects: LocalizedProject[] = [
   {
     title: { fr: "Mon premier portfolio", en: "My first portfolio" },
     description: {
-      fr: "Mon premier portfolio, entièrement conçu et développé par moi-même. Pour moi, c’est un vrai accomplissement.",
+      fr: "Mon premier portfolio, entièrement conçu et développé par moi-même.",
       en: "My first portfolio which is designed and developed entirely by myself. For me, it's big accomplishment.",
     },
     tools: ["Gatsby", "Typescript", "styled-component", "styled-icons"],
