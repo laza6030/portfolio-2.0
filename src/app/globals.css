@@ -103,6 +103,22 @@
     --color-active: #5c9dff;
     --color-border: #33405a;
   }
+
+  html:not(.dark) :is(body, header, footer) {
+    background-image: image-set(
+      url("/bg-texture.avif") type("image/avif"),
+      url("/bg-texture.webp") type("image/webp")
+    );
+    background-attachment: fixed;
+  }
+
+  html.dark :is(body, header, footer) {
+    background-image: image-set(
+      url("/bg-texture-dark.avif") type("image/avif"),
+      url("/bg-texture-dark.webp") type("image/webp")
+    );
+    background-attachment: fixed;
+  }
 }
 
 /* v4 dropped Preflight's cursor: pointer on buttons. */

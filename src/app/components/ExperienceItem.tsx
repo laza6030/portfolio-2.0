@@ -23,7 +23,7 @@ export default function ExperienceItem(props: Props) {
         {post} {experiences.at}&nbsp;{society}
       </h2>
 
-      <p className="text-justify text-[15px]">{description}</p>
+      <p className="text-[15px] leading-relaxed">{description}</p>
     </article>
   );
 }

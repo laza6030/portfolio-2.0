@@ -18,7 +18,7 @@ export default function ProjectItem(props: Props) {
 
   return (
     <div
-      className={`animate-fade-up dark:shadow-dark-blue mr-[2px] mb-10 ml-[2px] w-full cursor-default rounded-md p-4 opacity-0 shadow-sm transition-shadow hover:shadow-md ${className ?? ""}`}
+      className={`animate-fade-up dark:shadow-dark-blue mr-[2px] mb-10 ml-[2px] w-full cursor-default rounded-md bg-[#e4e5e1] p-4 opacity-0 shadow-sm transition-shadow hover:shadow-md dark:bg-[#1b2637] ${className ?? ""}`}
       style={{ animationDelay: `${(index + 1) * 200}ms` }}
     >
       <h3 className="mb-1 flex items-center font-sans text-base font-bold">
@@ -51,7 +51,7 @@ export default function ProjectItem(props: Props) {
         )}
       </h3>
 
-      <p className="mb-2 text-[15px]">{description}</p>
+      <p className="mb-2 text-[15px] leading-relaxed">{description}</p>
 
       <ul className="flex list-none flex-wrap">
         {tools.map((item) => (
